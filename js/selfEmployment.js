@@ -181,7 +181,7 @@
     schemaCallback([tableSchema]);
   };
 
-  const API_KEY = 'qwerty';
+  const API_KEY = '123';
   const BASE_URL = `https://se-demo.noveogroup.com/api/getPayments?token=${API_KEY}&`;
   // var BASE_URL ='../json/SelfEmployeeConnectionData.json';
 
@@ -354,7 +354,7 @@
 
       if (isValidDate(dateObj.startDate) && isValidDate(dateObj.endDate)) {
         tableau.connectionData = JSON.stringify(dateObj);
-        tableau.connectionName = 'Salary viewer';
+        tableau.connectionName = 'Self Employment';
         tableau.submit();
       } else {
         const errorMsg = `
