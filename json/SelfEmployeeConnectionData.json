@@ -1,0 +1,115 @@
+{
+  "employees": [
+    {
+      "id": 87,
+      "login": "aivanov",
+      "name": "Ivan",
+      "surname": "Ivanov",
+      "payments": {
+        "2019": {
+          "nov": {
+            "efforts": 100,
+            "monthly_rate": 100,
+            "monthly_rate_currency": "RUB",
+            "currency": "EUR",
+            "accrued": 
+            {
+              "salary": 10000,
+              "salary_currency": "RUB",
+              "vacation_pays": 2000,
+              "vacation_pays_currency": "RUB",
+              "compensation_taxes_fees": "500",
+              "compensation_taxes_fees_currency": "RUB",
+              "compensation_bank_charges": "100",
+              "compensation_bank_charges_currency": "RUB",
+              "extra": "250",
+              "extra_currency": "RUB",
+              "delta": 150,
+              "delta_currency": "EUR",
+              "bank_comission": 10,
+              "bank_comission_currency": "EUR",
+              "bonus": 1000,
+              "bonus_currency": "RUB",
+              "patent": 0,
+              "patent_currency": "RUB",
+              "sick_pay": 300,
+              "total": 23000,
+              "hourly_rate_for_act": 17,
+              "efforts_for_act": 139,
+              "exchange_rate_payment_created": 88.17,
+              "exchange_rate_payment_sent": 87.74
+            }
+          },
+          "dec": {
+            "efforts": 100,
+            "monthly_rate": 100,
+            "monthly_rate_currency": "RUB",
+            "currency": "EUR",
+            "accrued":
+            {
+              "salary": 10000,
+              "salary_currency": "RUB",
+              "vacation_pays": 2000,
+              "vacation_pays_currency": "RUB",
+              "compensation_taxes_fees": "500",
+              "compensation_taxes_fees_currency": "RUB",
+              "compensation_bank_charges": "100",
+              "compensation_bank_charges_currency": "RUB",
+              "extra": "250",
+              "extra_currency": "RUB",
+              "delta": 150,
+              "delta_currency": "EUR",
+              "bank_comission": 10,
+              "bank_comission_currency": "EUR",
+              "bonus": 1000,
+              "bonus_currency": "RUB",
+              "patent": 0,
+              "patent_currency": "RUB",
+              "sick_pay": 300,
+              "total": 23000,
+              "hourly_rate_for_act": 17,
+              "efforts_for_act": 139,
+              "exchange_rate_payment_created": 88.17,
+              "exchange_rate_payment_sent": 87.74
+            }
+          }
+        },
+        "2020": {
+          "jan": {
+            "efforts": 100,
+            "monthly_rate": 100,
+            "monthly_rate_currency": "RUB",
+            "currency": "EUR",
+            "accrued":
+            {
+              "salary": 10000,
+              "salary_currency": "RUB",
+              "vacation_pays": 2000,
+              "vacation_pays_currency": "RUB",
+              "compensation_taxes_fees": "500",
+              "compensation_taxes_fees_currency": "RUB",
+              "compensation_bank_charges": "100",
+              "compensation_bank_charges_currency": "RUB",
+              "extra": "250",
+              "extra_currency": "RUB",
+              "delta": 150,
+              "delta_currency": "EUR",
+              "bank_comission": 10,
+              "bank_comission_currency": "EUR",
+              "bonus": 1000,
+              "bonus_currency": "RUB",
+              "patent": 0,
+              "patent_currency": "RUB",
+              "sick_pay": 300,
+              "total": 23000,
+              "hourly_rate_for_act": 17,
+              "efforts_for_act": 139,
+              "exchange_rate_payment_created": 88.17,
+              "exchange_rate_payment_received": 87.74
+            }
+          }
+        }
+      }
+    }
+  ]
+}
