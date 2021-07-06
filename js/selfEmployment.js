@@ -1,175 +1,200 @@
 (function () {
   // Create the connector object
-  const myConnector = tableau.makeConnector();
+  var myConnector = tableau.makeConnector();
 
   // Define the schema
   myConnector.getSchema = function (schemaCallback) {
-    const cols = [{
-      id: 'id',
-      dataType: tableau.dataTypeEnum.int,
-    },
-    {
-      id: 'login',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'name',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'surname',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'date',
-      alias: 'Year and month',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'currency',
-      alias: 'Salary currency of employee',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'efforts',
-      alias: 'efforts',
-      dataType: tableau.dataTypeEnum.int,
-    },
-    {
-      id: 'monthly_rate',
-      alias: 'monthly_rate',
-      dataType: tableau.dataTypeEnum.int,
-    },
-    {
-      id: 'monthly_rate_currency',
-      alias: 'monthly_rate_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'salary',
-      alias: 'salary',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'salary_currency',
-      alias: 'salary_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'vacation_pays',
-      alias: 'vacation_pays',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'vacation_pays_currency',
-      alias: 'vacation_pays_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'bonus',
-      alias: 'bonus',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'bonus_currency',
-      alias: 'bonus_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'sick_pay',
-      alias: 'sick_pay',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'compensation_taxes_fees',
-      alias: 'compensation_taxes_fees',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'compensation_taxes_fees_currency',
-      alias: 'compensation_taxes_fees_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'compensation_bank_charges',
-      alias: 'compensation_bank_charges',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'compensation_bank_charges_currency',
-      alias: 'compensation_bank_charges_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'extra',
-      alias: 'extra',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'extra_currency',
-      alias: 'extra_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'total',
-      alias: 'total',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'delta',
-      alias: 'delta',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'delta_currency',
-      alias: 'delta_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'bank_comission',
-      alias: 'bank_comission',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'bank_comission_currency',
-      alias: 'bank_comission_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'patent',
-      alias: 'patent',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'patent_currency',
-      alias: 'patent_currency',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'hourly_rate_for_act',
-      alias: 'hourly_rate_for_act',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'efforts_for_act',
-      alias: 'efforts_for_act',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'exchange_rate_payment_created',
-      alias: 'exchange_rate_payment_created',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'exchange_rate_payment_sent',
-      alias: 'exchange_rate_payment_sent',
-      dataType: tableau.dataTypeEnum.string,
-    },
-    {
-      id: 'exchange_rate_payment_received',
-      alias: 'exchange_rate_payment_received',
-      dataType: tableau.dataTypeEnum.string,
-    },
+    var cols = [{
+        id: "id",
+        dataType: tableau.dataTypeEnum.int,
+      },
+      {
+        id: "login",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "name",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "surname",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "date",
+        alias: "Year and month",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "currency",
+        alias: "Salary currency of employee",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "efforts",
+        alias: "efforts",
+        dataType: tableau.dataTypeEnum.int,
+      },
+      {
+        id: "monthly_rate",
+        alias: "monthly_rate",
+        dataType: tableau.dataTypeEnum.int,
+      },
+      {
+        id: "monthly_rate_currency",
+        alias: "monthly_rate_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "salary",
+        alias: "salary",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "salary_currency",
+        alias: "salary_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "vacation_pays",
+        alias: "vacation_pays",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "vacation_pays_currency",
+        alias: "vacation_pays_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "bonus",
+        alias: "bonus",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "bonus_currency",
+        alias: "bonus_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "sick_pay",
+        alias: "sick_pay",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "compensation_taxes_fees",
+        alias: "compensation_taxes_fees",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "compensation_taxes_fees_currency",
+        alias: "compensation_taxes_fees_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "compensation_bank_charges",
+        alias: "compensation_bank_charges",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "compensation_bank_charges_currency",
+        alias: "compensation_bank_charges_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "compensation_accounting",
+        alias: "compensation_accounting",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "compensation_accounting_currency",
+        alias: "compensation_accounting_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "extra",
+        alias: "extra",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "extra_currency",
+        alias: "extra_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "total",
+        alias: "total",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "delta",
+        alias: "delta",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "delta_currency",
+        alias: "delta_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "bank_comission",
+        alias: "bank_comission",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "bank_comission_currency",
+        alias: "bank_comission_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "patent",
+        alias: "patent",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "patent_currency",
+        alias: "patent_currency",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "hourly_rate_for_act",
+        alias: "hourly_rate_for_act",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "efforts_for_act",
+        alias: "efforts_for_act",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "exchange_rate_payment_created_eur",
+        alias: "exchange_rate_payment_created_eur",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "exchange_rate_payment_created_usd",
+        alias: "exchange_rate_payment_created_usd",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "exchange_rate_payment_created_rub",
+        alias: "exchange_rate_payment_created_rub",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "exchange_rate_payment_sent_eur",
+        alias: "exchange_rate_payment_sent_eur",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "exchange_rate_payment_sent_usd",
+        alias: "exchange_rate_payment_sent_usd",
+        dataType: tableau.dataTypeEnum.string,
+      },
+      {
+        id: "exchange_rate_payment_sent_rub",
+        alias: "exchange_rate_payment_sent_rub",
+        dataType: tableau.dataTypeEnum.string,
+      }
     ];
 
     const tableSchema = {
@@ -235,7 +260,7 @@
           const {
             currency, efforts, monthly_rate, monthly_rate_currency, accrued,
           } = payments[year][month];
-          const {
+          const { 
             salary,
             salary_currency,
             vacation_pays,
@@ -244,6 +269,8 @@
             compensation_taxes_fees_currency,
             compensation_bank_charges,
             compensation_bank_charges_currency,
+            compensation_accounting,
+            compensation_accounting_currency,
             extra,
             extra_currency,
             delta,
@@ -259,21 +286,19 @@
             hourly_rate_for_act,
             efforts_for_act,
             exchange_rate_payment_created,
-            exchange_rate_payment_sent,
-            exchange_rate_payment_received,
+            exchange_rate_payment_sent
           } = accrued;
           const monthNum = getNumberByMonth(month);
           const date = `${year}-${monthNum < 10 ? `0${monthNum}` : monthNum}-01`;
-
           const tRow = {
             id,
             login,
             name,
             surname,
             date,
-            currency,
+            currency, 
             efforts,
-            monthly_rate,
+            monthly_rate, 
             monthly_rate_currency,
             salary,
             salary_currency,
@@ -283,6 +308,8 @@
             compensation_taxes_fees_currency,
             compensation_bank_charges,
             compensation_bank_charges_currency,
+            compensation_accounting,
+            compensation_accounting_currency,
             extra,
             extra_currency,
             delta,
@@ -297,10 +324,21 @@
             total,
             hourly_rate_for_act,
             efforts_for_act,
-            exchange_rate_payment_created,
-            exchange_rate_payment_sent,
-            exchange_rate_payment_received,
-          };
+          }
+          if (exchange_rate_payment_created) {
+            const {USD: exchange_rate_payment_created_usd, EUR: exchange_rate_payment_created_eur, RUB: exchange_rate_payment_created_rub} = exchange_rate_payment_created;
+            tRow['exchange_rate_payment_created_usd'] = exchange_rate_payment_created_usd;
+            tRow['exchange_rate_payment_created_eur'] = exchange_rate_payment_created_eur;
+            tRow['exchange_rate_payment_created_rub'] = exchange_rate_payment_created_rub;
+          }
+
+          if (exchange_rate_payment_sent) {
+            const {USD: exchange_rate_payment_sent_usd, EUR: exchange_rate_payment_sent_eur, RUB: exchange_rate_payment_sent_rub} = exchange_rate_payment_sent;
+            tRow['exchange_rate_payment_sent_usd'] = exchange_rate_payment_sent_usd;
+            tRow['exchange_rate_payment_sent_eur'] = exchange_rate_payment_sent_eur;
+            tRow['exchange_rate_payment_sent_rub'] = exchange_rate_payment_sent_rub;
+          }
+          
           targetArray.push(tRow);
         }
       }
